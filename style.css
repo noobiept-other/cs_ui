@@ -33,6 +33,17 @@ ul {
     margin: 10px;
 }
 
+.friend {
+    cursor: pointer;
+}
+
+.friend:hover {
+    background-color: gray;
+}
+
+.hidden {
+    display: none;
+}
 
     /* --- Menus --- */
 
@@ -79,4 +90,10 @@ ul {
 
 #FriendsList li {
     height: 50px;
+}
+
+#FriendContextMenu {
+    position: absolute;
+    background-color: lightcoral;
+    padding: 5px;
 }

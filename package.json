@@ -1,0 +1,6 @@
+{
+    "name": "cs_ui",
+    "devDependencies": {
+        "typescript": "~2.0.3"
+    }
+}
