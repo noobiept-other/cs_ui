@@ -33,10 +33,6 @@ ul {
     margin: 10px;
 }
 
-.friend {
-    cursor: pointer;
-}
-
 .friend:hover {
     background-color: gray;
 }
@@ -44,6 +40,11 @@ ul {
 .hidden {
     display: none;
 }
+
+.button {
+    cursor: pointer;
+}
+
 
     /* --- Menus --- */
 
@@ -96,4 +97,8 @@ ul {
     position: absolute;
     background-color: lightcoral;
     padding: 5px;
+}
+
+#Party li {
+    display: inline-block;
 }
