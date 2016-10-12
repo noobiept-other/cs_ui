@@ -99,6 +99,19 @@ ul {
     padding: 5px;
 }
 
+
+    /* --- Party --- */
+
 #Party li {
     display: inline-block;
+}
+
+#BottomMenu {
+    position: relative;
+}
+
+#PartyChat {
+    position: absolute;
+    top: -50px;
+    background-color: lightskyblue;
 }

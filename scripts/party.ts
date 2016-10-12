@@ -2,10 +2,27 @@ module Party {
 
 
     var PARTY: HTMLElement;
+    var PARTY_CHAT: HTMLElement;
 
 
     export function init() {
         PARTY = document.getElementById( 'Party' ) !;
+        PARTY_CHAT = document.getElementById( 'PartyChat' ) !;
+
+        var chatButton = document.getElementById( 'PartyChatButton' ) !;
+        var chatOpened = false;
+
+        chatButton.onclick = function () {
+            if ( chatOpened ) {
+                closeChat();
+            }
+
+            else {
+                openChat();
+            }
+
+            chatOpened = !chatOpened;
+        };
     }
 
 
@@ -19,5 +36,15 @@ module Party {
         }
 
         PARTY.appendChild( friend.cloneNode( true ) );
+    }
+
+
+    function openChat() {
+        PARTY_CHAT.classList.remove( 'hidden' );
+    }
+
+
+    function closeChat() {
+        PARTY_CHAT.classList.add( 'hidden' );
     }
 }
