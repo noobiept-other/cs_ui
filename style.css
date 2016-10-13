@@ -12,12 +12,20 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+@font-face {
+    font-family: 'iec_symbols_unicoderegular';
+    src: url('fonts/Unicode_IEC_symbol.woff');
 }
 
 
@@ -52,13 +60,26 @@ ul {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    background-color: lightblue;
+    background: linear-gradient(to right, rgb(27, 36, 44) 0%, rgb(62, 70, 77) 10%, rgb(62, 70, 77) 90%, rgb(27, 36, 44) 100%);
+    color: white;
+}
+
+#TopMenu li {
+    padding: 15px 50px;
+}
+
+#TopMenu li:not(:last-of-type) {
+    border-right: 3px solid rgb(34, 39, 43);
 }
 
 #ChatList li {
     display: inline-block;
+}
+
+#Quit {
+    font-family: 'iec_symbols_unicoderegular';
 }
 
 
