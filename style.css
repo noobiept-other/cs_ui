@@ -15,6 +15,7 @@ body {
     background-image: url("images/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    color: rgb(122, 154, 186);
 }
 
 ul {
@@ -37,8 +38,16 @@ ul {
 }
 
 .block {
-    background-color: lightgray;
+    background-color: rgba(39, 51, 62, 0.8);
     margin: 10px;
+}
+
+.block > * {
+    padding: 10px;
+}
+
+.blockHeader {
+    background-color: rgba(39, 51, 62, 0.9);
 }
 
 .friend:hover {
@@ -96,7 +105,7 @@ ul {
 }
 
 #CurrentTab {
-    width: 75%;
+    width: 65%;
 }
 
 #Account {
@@ -104,6 +113,8 @@ ul {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
+    width: 20%;
+    text-align: left;
 }
 
 #FriendsList {
@@ -114,10 +125,15 @@ ul {
     height: 50px;
 }
 
+
 #FriendContextMenu {
     position: absolute;
     background-color: lightcoral;
     padding: 5px;
+}
+
+#FriendsOnline {
+    float: right;
 }
 
 
