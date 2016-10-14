@@ -2,7 +2,6 @@ module FriendList {
 
 
     var CONTEXT_MENU: HTMLElement;
-    var SELECTED_FRIEND: HTMLElement;
 
 
     export function init() {
@@ -14,12 +13,11 @@ module FriendList {
 
             let friend = <HTMLElement>friends[ a ];
             friend.onclick = function ( event ) {
-                SELECTED_FRIEND = friend;
 
-                ContextMenu.show( {
+                ContextMenu.show( ContextMenu.Type.FriendsList, friend, {
                     left: event.clientX,
                     top: event.clientY
-                }, ContextMenu.Type.FriendsList );
+                });
 
                 event.stopPropagation();
             };
@@ -27,8 +25,7 @@ module FriendList {
 
         var inviteParty = document.getElementById( 'InviteToParty' ) !;
         inviteParty.onclick = function () {
-            Party.addFriend( SELECTED_FRIEND );
-            ContextMenu.hide();
+            Party.addFriend( ContextMenu.getAssociated() );
         };
     }
 }

@@ -8,6 +8,7 @@ module ContextMenu {
     var FRIENDS_LIST: HTMLElement;
     var PARTY: HTMLElement;
     var OPENED: HTMLElement | null = null;
+    var ASSOCIATED_ELEMENT: HTMLElement;  // associated element (from where we opened the context menu)
 
 
     export function init() {
@@ -20,7 +21,8 @@ module ContextMenu {
     /**
      * Show the selected menu, and position it in the given position.
      */
-    export function show( position: { top: number, left: number }, type: Type ) {
+    export function show( type: Type, associated: HTMLElement, position: { top: number, left: number }) {
+
         if ( OPENED ) {
             OPENED.classList.add( 'hidden' );
         }
@@ -43,6 +45,7 @@ module ContextMenu {
         }
 
         OPENED.classList.remove( 'hidden' );
+        ASSOCIATED_ELEMENT = associated;
 
         // check if the menu will fit in the window, otherwise we need to position it a bit above
         var diff = window.innerHeight - ( position.top + MENU.offsetHeight );
@@ -63,5 +66,10 @@ module ContextMenu {
             OPENED.classList.add( 'hidden' );
             OPENED = null;
         }
+    }
+
+
+    export function getAssociated() {
+        return ASSOCIATED_ELEMENT;
     }
 }

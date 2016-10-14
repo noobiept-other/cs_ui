@@ -23,6 +23,11 @@ module Party {
 
             chatOpened = !chatOpened;
         };
+
+        var kickFromParty = document.getElementById( 'KickFromParty' ) !;
+        kickFromParty.onclick = function () {
+            removeFriend( ContextMenu.getAssociated() );
+        }
     }
 
 
@@ -37,15 +42,27 @@ module Party {
 
         var partyPlayer = <HTMLElement>friend.cloneNode( true );
         partyPlayer.onclick = function ( event ) {
-            ContextMenu.show( {
+            ContextMenu.show( ContextMenu.Type.Party, friend, {
                 left: event.clientX,
                 top: event.clientY
-            }, ContextMenu.Type.Party );
+            });
 
             event.stopPropagation();
         }
 
         PARTY.appendChild( partyPlayer );
+    }
+
+
+    function removeFriend( friend: HTMLElement ) {
+        for ( var a = 0; a < PARTY.childNodes.length; a++ ) {
+            var partyElement = PARTY.childNodes[ a ];
+
+            if ( partyElement.textContent === friend.textContent ) {
+                PARTY.removeChild( partyElement );
+                return;
+            }
+        }
     }
 
 

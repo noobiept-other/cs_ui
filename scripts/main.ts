@@ -16,7 +16,5 @@ window.onclick = function ( event ) {
         return;
     }
 
-    if ( !menu.contains( element ) ) {
-        ContextMenu.hide();
-    }
+    ContextMenu.hide();
 }
