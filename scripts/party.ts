@@ -28,6 +28,16 @@ module Party {
         kickFromParty.onclick = function () {
             removeFriend( ContextMenu.getAssociated() );
         }
+
+        var chatInput = <HTMLInputElement>document.getElementById( 'PartyChatInput' ) !;
+        chatInput.onkeyup = function ( event ) {
+
+            // on 'enter' key press
+            if ( event.keyCode === 13 ) {
+                addChatLine( chatInput.value );
+                chatInput.value = '';
+            }
+        };
     }
 
 
@@ -73,5 +83,21 @@ module Party {
 
     function closeChat() {
         PARTY_CHAT.classList.add( 'hidden' );
+    }
+
+
+    function addChatLine( value: string ) {
+
+        if ( value ) {
+            var list = PARTY_CHAT.querySelector( 'ul' );
+            var text = document.createElement( 'li' );
+
+            text.innerHTML = '<span class="playerName">Player Name</span>: ' + value;
+
+            list.appendChild( text );
+
+            // scroll to the bottom when a new text is added
+            list.scrollTop = list.scrollHeight;
+        }
     }
 }

@@ -51,7 +51,7 @@ module ContextMenu {
         var diff = window.innerHeight - ( position.top + MENU.offsetHeight );
 
         if ( diff < 0 ) {
-            position.top += diff;
+            position.top += diff - 1;
         }
 
         MENU.style.top = position.top + 'px';

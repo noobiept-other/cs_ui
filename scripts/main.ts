@@ -10,7 +10,6 @@ window.onload = function () {
  */
 window.onclick = function ( event ) {
     var element = event.srcElement;
-    var menu = document.getElementById( 'ContextMenu' ) !;
 
     if ( !element ) {
         return;
