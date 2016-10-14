@@ -7,6 +7,7 @@
 
 	<link rel="stylesheet" href="style.css" />
 
+	<script src="scripts/context_menu.js"></script>
 	<script src="scripts/friend_list.js"></script>
 	<script src="scripts/party.js"></script>
 	<script src="scripts/main.js"></script>
@@ -63,12 +64,20 @@
 		</ul>
 	</div>
 
-	<ul id="FriendContextMenu" class="hidden">
-		<li id="InviteToParty" class="button">Invite to Party</li>
-		<hr />
-		<li>CS:GO Profile</li>
-		<li>Steam Message</li>
-	</ul>
+	<div id="ContextMenu" class="hidden">
+		<ul id="FriendContextMenu" class="hidden">
+			<li id="InviteToParty" class="button">Invite to Party</li>
+			<hr />
+			<li>CS:GO Profile</li>
+			<li>Steam Message</li>
+		</ul>
+		<ul id="PartyContextMenu" class="hidden">
+			<li id="KickFromParty" class="button">Kick Player</li>
+			<hr />
+			<li>CS:GO Profile</li>
+			<li>Steam Message</li>
+		</ul>
+	</div>
 </body>
 
 </html>

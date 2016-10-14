@@ -1,6 +1,7 @@
 window.onload = function () {
     FriendList.init();
     Party.init();
+    ContextMenu.init();
 };
 
 
@@ -9,13 +10,13 @@ window.onload = function () {
  */
 window.onclick = function ( event ) {
     var element = event.srcElement;
-    var menu = document.getElementById( 'FriendContextMenu' ) !;
+    var menu = document.getElementById( 'ContextMenu' ) !;
 
     if ( !element ) {
         return;
     }
 
     if ( !menu.contains( element ) ) {
-        FriendList.hideContextMenu();
+        ContextMenu.hide();
     }
 }

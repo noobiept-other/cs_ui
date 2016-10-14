@@ -138,7 +138,7 @@ ul {
     height: 50px;
 }
 
-#FriendContextMenu {
+#ContextMenu {
     position: absolute;
     background: linear-gradient(to bottom, rgb(40, 58, 78), rgb(22, 28, 33));
     padding: 10px 0;
@@ -146,16 +146,16 @@ ul {
     text-align: left;
 }
 
-#FriendContextMenu li {
+#ContextMenu li {
     padding: 5px;
     padding-right: 40px;
 }
 
-#FriendContextMenu li:hover {
+#ContextMenu li:hover {
     background: linear-gradient(to right, rgba(77, 115, 138, 0.8), rgba(77, 115, 138, 0) 85%);
 }
 
-#FriendContextMenu hr {
+#ContextMenu hr {
     border: 0;
     height: 2px;
     background: linear-gradient(to right, rgb(44, 65, 87), rgb(34, 48, 63));

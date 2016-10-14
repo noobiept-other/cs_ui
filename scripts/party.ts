@@ -35,7 +35,17 @@ module Party {
             return;
         }
 
-        PARTY.appendChild( friend.cloneNode( true ) );
+        var partyPlayer = <HTMLElement>friend.cloneNode( true );
+        partyPlayer.onclick = function ( event ) {
+            ContextMenu.show( {
+                left: event.clientX,
+                top: event.clientY
+            }, ContextMenu.Type.Party );
+
+            event.stopPropagation();
+        }
+
+        PARTY.appendChild( partyPlayer );
     }
 
 
