@@ -51,7 +51,7 @@ ul {
 }
 
 .friend:hover {
-    background-color: gray;
+    background-color: rgba(69, 86, 101, 0.9);
 }
 
 .hidden {
@@ -75,8 +75,18 @@ ul {
     color: white;
 }
 
+#BottomMenu {
+    position: relative;
+    justify-content: flex-start;
+}
+
 #TopMenu li {
     padding: 15px 50px;
+}
+
+#BottomMenu > * {
+    padding: 0 20px;
+    height: 30px;
 }
 
 #TopMenu li:not(:last-of-type) {
@@ -117,6 +127,9 @@ ul {
     text-align: left;
 }
 
+
+    /* --- Friends List --- */
+
 #FriendsList {
     flex-grow: 1;
 }
@@ -125,15 +138,39 @@ ul {
     height: 50px;
 }
 
-
 #FriendContextMenu {
     position: absolute;
-    background-color: lightcoral;
+    background: linear-gradient(to bottom, rgb(40, 58, 78), rgb(22, 28, 33));
+    padding: 10px 0;
+    border: 2px solid rgb(66, 96, 127);
+    text-align: left;
+}
+
+#FriendContextMenu li {
     padding: 5px;
+    padding-right: 40px;
+}
+
+#FriendContextMenu li:hover {
+    background: linear-gradient(to right, rgba(77, 115, 138, 0.8), rgba(77, 115, 138, 0) 85%);
+}
+
+#FriendContextMenu hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, rgb(44, 65, 87), rgb(34, 48, 63));
 }
 
 #FriendsOnline {
     float: right;
+}
+
+#FriendsList > ul {
+    padding: 0;
+}
+
+#FriendsList li {
+    padding: 5px 10px;
 }
 
 
@@ -141,10 +178,7 @@ ul {
 
 #Party li {
     display: inline-block;
-}
-
-#BottomMenu {
-    position: relative;
+    margin: 0 5px;
 }
 
 #PartyChat {
