@@ -7,6 +7,7 @@
 
 	<link rel="stylesheet" href="style.css" />
 
+	<script src="scripts/main_menu.js"></script>
 	<script src="scripts/play.js"></script>
 	<script src="scripts/context_menu.js"></script>
 	<script src="scripts/friend_list.js"></script>
@@ -16,12 +17,12 @@
 
 <body>
 	<ul id="TopMenu">
-		<li>PLAY</li>
-		<li>INVENTORY</li>
-		<li>BLOG</li>
-		<li>WATCH</li>
-		<li>AWARDS</li>
-		<li>OPTIONS</li>
+		<li id="Play" class="button">PLAY</li>
+		<li id="Inventory" class="button">INVENTORY</li>
+		<li id="Blog" class="button">BLOG</li>
+		<li id="Watch" class="button">WATCH</li>
+		<li id="Awards" class="button">AWARDS</li>
+		<li id="Options" class="button">OPTIONS</li>
 		<li id="Quit">⏻</li>
 	</ul>
 
@@ -44,7 +45,7 @@
 		</div>
 
 		<div id="CurrentTab" class="block">
-			<div id="Play">
+			<div id="PlayTab" class="hidden">
 				<ul class="blockHeader">
 					<li class="tab">Common</li>
 					<li class="tab">Workshop</li>
@@ -120,6 +121,11 @@
 					<div id="PlayCancel" class="blockButton">Cancel</div>
 				</div>
 			</div>
+			<div id="InventoryTab" class="hidden">inventory...</div>
+			<div id="BlogTab" class="hidden">blog...</div>
+			<div id="WatchTab" class="hidden">watch...</div>
+			<div id="AwardsTab" class="hidden">awards...</div>
+			<div id="OptionsTab" class="hidden">options...</div>
 		</div>
 	</div>
 

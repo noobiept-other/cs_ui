@@ -59,7 +59,7 @@ ul {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .button {
@@ -237,7 +237,7 @@ ul {
 
     /* --- Play Tab --- */
 
-#Play {
+#PlayTab {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -245,7 +245,7 @@ ul {
     position: relative;
 }
 
-#Play li {
+#PlayTab li {
     display: inline-block;
 }
 
@@ -253,7 +253,7 @@ ul {
     flex-grow: 1;
 }
 
-#Play hr {
+#PlayTab hr {
     width: 100%;
     height: 1px;
     background-color:rgba(38, 46, 54, 0.6);
@@ -279,10 +279,6 @@ ul {
     align-items: center;
 }
 
-#PlayOverlay.hidden {
-    display: none;
-}
-
 
     /* --- Accept Dialog --- */
 
@@ -295,10 +291,6 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-#AcceptDialogOverlay.hidden {
-    display: none;
 }
 
 #AcceptDialog {

@@ -3,6 +3,7 @@ window.onload = function () {
     Party.init();
     ContextMenu.init();
     Play.init();
+    MainMenu.init();
 };
 
 
