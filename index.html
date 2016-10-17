@@ -7,6 +7,7 @@
 
 	<link rel="stylesheet" href="style.css" />
 
+	<script src="scripts/play.js"></script>
 	<script src="scripts/context_menu.js"></script>
 	<script src="scripts/friend_list.js"></script>
 	<script src="scripts/party.js"></script>
@@ -112,7 +113,11 @@
 				</ul>
 				<div id="PlayControls">
 					<div>Prime Matchmaking<br />Exclusively search for Prime matches</div>
-					<div id="PlayButton">GO</div>
+					<div id="PlayButton" class="blockButton">GO</div>
+				</div>
+				<div id="PlayOverlay" class="hidden">
+					<div>Searching...</div>
+					<div id="PlayCancel" class="blockButton">Cancel</div>
 				</div>
 			</div>
 		</div>

@@ -43,6 +43,10 @@ module Party {
 
     export function addFriend( friend: HTMLElement ) {
 
+        if ( Play.isPlaying() ) {
+            return;
+        }
+
         var friendName = friend.textContent!;
 
         // this player is already in the party
@@ -65,6 +69,11 @@ module Party {
 
 
     function removeFriend( friend: HTMLElement ) {
+
+        if ( Play.isPlaying() ) {
+            return;
+        }
+
         for ( var a = 0; a < PARTY.childNodes.length; a++ ) {
             var partyElement = PARTY.childNodes[ a ];
 

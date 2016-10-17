@@ -66,6 +66,14 @@ ul {
     cursor: pointer;
 }
 
+.blockButton {
+    cursor: pointer;
+    color: rgb(128, 187, 142);
+    background: linear-gradient(to bottom, rgb(47, 113, 92), rgb(34, 94, 66));
+    padding: 10px 100px;
+    margin: 20px;
+}
+
 .playerName {
     color: rgb(135, 177, 204);
 }
@@ -229,6 +237,7 @@ ul {
     display: flex;
     flex-direction: column;
     padding: 0;
+    position: relative;
 }
 
 #Play li {
@@ -253,9 +262,18 @@ ul {
     justify-content: space-between;
 }
 
-#PlayButton {
-    color: rgb(128, 187, 142);
-    background: linear-gradient(to bottom, rgb(47, 113, 92), rgb(34, 94, 66));
-    padding: 10px 100px;
-    margin: 20px;
+#PlayOverlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#PlayOverlay.hidden {
+    display: none;
 }
