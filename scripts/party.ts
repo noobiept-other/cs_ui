@@ -38,6 +38,26 @@ module Party {
                 chatInput.value = '';
             }
         };
+
+        var mainPlayer = document.getElementById( 'MainPlayer' ) !;
+        mainPlayer.onclick = function ( event ) {
+            ContextMenu.show( ContextMenu.Type.MainPlayer, mainPlayer, {
+                left: event.clientX,
+                top: event.clientY
+            });
+
+            event.stopPropagation();
+        };
+
+        var leaveParty = document.getElementById( 'LeaveParty' ) !;
+        leaveParty.onclick = function () {
+
+            var friends = PARTY.querySelectorAll( '.friend' );
+
+            for ( var a = 0; a < friends.length; a++ ) {
+                PARTY.removeChild( friends[ a ] );
+            }
+        };
     }
 
 

@@ -2,11 +2,13 @@ module ContextMenu {
 
     export enum Type {
         FriendsList,
-        Party
+        Party,
+        MainPlayer
     }
     var MENU: HTMLElement;
     var FRIENDS_LIST: HTMLElement;
     var PARTY: HTMLElement;
+    var MAIN_PLAYER: HTMLElement;
     var OPENED: HTMLElement | null = null;
     var ASSOCIATED_ELEMENT: HTMLElement;  // associated element (from where we opened the context menu)
 
@@ -15,6 +17,7 @@ module ContextMenu {
         MENU = document.getElementById( 'ContextMenu' ) !;
         FRIENDS_LIST = document.getElementById( 'FriendContextMenu' ) !;
         PARTY = document.getElementById( 'PartyContextMenu' ) !;
+        MAIN_PLAYER = document.getElementById( 'MainPlayerContextMenu' ) !;
     }
 
 
@@ -38,6 +41,10 @@ module ContextMenu {
 
             case Type.Party:
                 OPENED = PARTY;
+                break;
+
+            case Type.MainPlayer:
+                OPENED = MAIN_PLAYER;
                 break;
 
             default:

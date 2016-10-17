@@ -54,7 +54,7 @@ ul {
     background-color: rgba(39, 51, 62, 0.5);
 }
 
-.friend:hover {
+.friend:hover, #MainPlayer:hover {
     background-color: rgba(69, 86, 101, 0.9);
 }
 
