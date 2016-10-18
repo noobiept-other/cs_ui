@@ -52,6 +52,10 @@ module Party {
         var leaveParty = document.getElementById( 'LeaveParty' ) !;
         leaveParty.onclick = function () {
 
+            if ( Play.isPlaying() ) {
+                return;
+            }
+
             var friends = PARTY.querySelectorAll( '.friend' );
 
             for ( var a = 0; a < friends.length; a++ ) {

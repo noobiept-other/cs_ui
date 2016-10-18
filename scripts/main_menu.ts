@@ -16,10 +16,12 @@ module MainMenu {
             changeTab( this.id + 'Tab' );
         }
 
-        for ( var a = 0; a < menu.childNodes.length; a++ ) {
-            var item = <HTMLElement>menu.childNodes[ a ];
+        for ( var a = 0; a < menu.children.length; a++ ) {
+            var item = <HTMLElement>menu.children[ a ];
 
-            item.onclick = openTab;
+            if ( item.classList.contains( 'button' ) ) {
+                item.onclick = openTab;
+            }
         }
     }
 

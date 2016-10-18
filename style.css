@@ -64,6 +64,7 @@ ul {
 
 .button {
     cursor: pointer;
+    transition: background-color 0.2s;
 }
 
 .blockButton {
@@ -72,10 +73,11 @@ ul {
     background: linear-gradient(to bottom, rgb(47, 113, 92), rgb(34, 94, 66));
     padding: 10px 100px;
     margin: 20px;
-    transition: box-shadow 0.1s;
+    transition: box-shadow 0.1s, color 0.2s;
 }
 
 .blockButton:hover {
+    color: rgb(148, 207, 162);;
     box-shadow: rgba(15, 122, 25, 0.8) 0px 0px 5px 1px;
 }
 
@@ -84,7 +86,11 @@ ul {
 }
 
 .tab {
-    cursor: pointer;
+    padding: 3px 20px;
+}
+
+.tab:hover, .tabSelected {
+    background: linear-gradient(to bottom, rgb(67, 94, 130), rgb(57, 81, 111));
 }
 
 .map img {
@@ -111,6 +117,10 @@ ul {
 
 #TopMenu li {
     padding: 15px 50px;
+}
+
+#TopMenu .button:hover {
+    background-color: rgb(94, 99, 104);
 }
 
 #BottomMenu > * {
@@ -277,6 +287,24 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.gameDescription {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 50px;
+    text-align: left;
+    font-size: 90%;
+}
+
+.gameDescription > * {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+#PlayTab .gameDescription li {
+    display: block;
 }
 
 
