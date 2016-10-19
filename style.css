@@ -85,11 +85,11 @@ ul {
     color: rgb(135, 177, 204);
 }
 
-.tab {
+.innerTab {
     padding: 3px 20px;
 }
 
-.tab:hover, .tabSelected {
+.innerTab:hover, .tabSelected {
     background: linear-gradient(to bottom, rgb(67, 94, 130), rgb(57, 81, 111));
 }
 
@@ -97,6 +97,18 @@ ul {
     width: 150px;
 }
 
+.horizontalList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.tab {
+    width: 100%;
+    height: 100%;
+}
 
     /* --- Menus --- */
 
@@ -138,6 +150,10 @@ ul {
 
 #Quit {
     font-family: 'iec_symbols_unicoderegular';
+}
+
+#Home img {
+    height: 18px;
 }
 
 
@@ -248,7 +264,6 @@ ul {
     /* --- Play Tab --- */
 
 #PlayTab {
-    height: 100%;
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -324,5 +339,36 @@ ul {
 #AcceptDialog {
     background: linear-gradient(to bottom, rgb(45, 67, 56), rgb(8, 14, 20));
     color: white;
+    padding: 20px;
+}
+
+
+    /* --- Blog Tab --- */
+
+#BlogTab iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+    /* --- Home Tab --- */
+
+#HomeTab {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+}
+
+#HomeTab h1 {
+    margin: 0;
+}
+
+#HomeTab img {
+    max-width: 150px;
+}
+
+#HomeTab figure {
     padding: 20px;
 }

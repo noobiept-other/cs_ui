@@ -7,6 +7,7 @@
 
 	<link rel="stylesheet" href="style.css" />
 
+	<script src="scripts/home.js"></script>
 	<script src="scripts/main_menu.js"></script>
 	<script src="scripts/play.js"></script>
 	<script src="scripts/context_menu.js"></script>
@@ -17,6 +18,7 @@
 
 <body>
 	<ul id="TopMenu">
+		<li id="Home" class="button"><img src="images/home.png" alt="Home" /></li>
 		<li id="Play" class="button">PLAY</li>
 		<li id="Inventory" class="button">INVENTORY</li>
 		<li id="Blog" class="button">BLOG</li>
@@ -45,17 +47,53 @@
 		</div>
 
 		<div id="CurrentTab" class="block">
-			<div id="PlayTab" class="hidden">
+			<div id="HomeTab" class="tab hidden">
+				<div class="horizontalList">
+					<figure>
+						<h1>Latest Blog Post</h1>
+						<img src="images/blog_inferno.jpg" alt="Inferno" />
+						<figcaption>Inferno Returns!</figcaption>
+					</figure>
+					<figure>
+						<h1>Featured Skin</h1>
+						<img src="images/awp_graphite.png" alt="Awp Graphite" /> <a href="https://steamcommunity.com/market/listings/730/AWP%20%7C%20Graphite%20%28Minimal%20Wear%29">market</a>
+					</figure>
+					<figure>
+						<h1>Featured Case</h1>
+						<img src="images/case.png" alt="Case" />
+					</figure>
+				</div>
+				<div class="horizontalList">
+					<figure>
+						<h1>Overwatch</h1>
+					</figure>
+					<figure>
+						<h1>Game to Watch</h1>
+						<div>
+							<img src="images/global_elite.png" alt="Rank" />
+							<ul>
+								<li>7 - 1</li>
+								<li>Dust II</li>
+								<li>Viewers: 1337</li>
+							</ul>
+						</div>
+					</figure>
+					<figure>
+						<h1>Previous Game Stats</h1>
+					</figure>
+				</div>
+			</div>
+			<div id="PlayTab" class="tab hidden">
 				<ul class="blockHeader">
-					<li class="tab button tabSelected">Common</li>
-					<li class="tab button">Workshop</li>
+					<li class="innerTab button tabSelected">Common</li>
+					<li class="innerTab button">Workshop</li>
 				</ul>
 				<ul class="blockHeader2">
-					<li class="tab button">Deathmatch</li>
-					<li class="tab button">Arms Race</li>
-					<li class="tab button">Demolition</li>
-					<li class="tab button">Casual</li>
-					<li class="tab button tabSelected">Competitive</li>
+					<li class="innerTab button">Deathmatch</li>
+					<li class="innerTab button">Arms Race</li>
+					<li class="innerTab button">Demolition</li>
+					<li class="innerTab button">Casual</li>
+					<li class="innerTab button tabSelected">Competitive</li>
 				</ul>
 				<div class="gameDescription">
 					<div>
@@ -129,11 +167,13 @@
 					<div id="PlayCancel" class="blockButton">Cancel</div>
 				</div>
 			</div>
-			<div id="InventoryTab" class="hidden">inventory...</div>
-			<div id="BlogTab" class="hidden">blog...</div>
-			<div id="WatchTab" class="hidden">watch...</div>
-			<div id="AwardsTab" class="hidden">awards...</div>
-			<div id="OptionsTab" class="hidden">options...</div>
+			<div id="InventoryTab" class="tab hidden">inventory...</div>
+			<div id="BlogTab" class="tab hidden">
+				<iframe frameborder="0"></iframe>
+			</div>
+			<div id="WatchTab" class="tab hidden">watch...</div>
+			<div id="AwardsTab" class="tab hidden">awards...</div>
+			<div id="OptionsTab" class="tab hidden">options...</div>
 		</div>
 	</div>
 

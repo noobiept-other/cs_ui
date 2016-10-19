@@ -2,6 +2,7 @@ window.onload = function () {
     FriendList.init();
     Party.init();
     ContextMenu.init();
+    Home.init();
     Play.init();
     MainMenu.init();
 };
