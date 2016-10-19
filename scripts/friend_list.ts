@@ -15,8 +15,8 @@ module FriendList {
             friend.onclick = function ( event ) {
 
                 ContextMenu.show( ContextMenu.Type.FriendsList, friend, {
-                    left: event.clientX,
-                    top: event.clientY
+                    left: event.pageX,
+                    top: event.pageY
                 });
 
                 event.stopPropagation();

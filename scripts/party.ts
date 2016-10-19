@@ -42,8 +42,8 @@ module Party {
         var mainPlayer = document.getElementById( 'MainPlayer' ) !;
         mainPlayer.onclick = function ( event ) {
             ContextMenu.show( ContextMenu.Type.MainPlayer, mainPlayer, {
-                left: event.clientX,
-                top: event.clientY
+                left: event.pageX,
+                top: event.pageY
             });
 
             event.stopPropagation();
@@ -81,8 +81,8 @@ module Party {
         var partyPlayer = <HTMLElement>friend.cloneNode( true );
         partyPlayer.onclick = function ( event ) {
             ContextMenu.show( ContextMenu.Type.Party, friend, {
-                left: event.clientX,
-                top: event.clientY
+                left: event.pageX,
+                top: event.pageY
             });
 
             event.stopPropagation();

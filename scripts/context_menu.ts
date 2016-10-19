@@ -55,7 +55,7 @@ module ContextMenu {
         ASSOCIATED_ELEMENT = associated;
 
         // check if the menu will fit in the window, otherwise we need to position it a bit above
-        var diff = window.innerHeight - ( position.top + MENU.offsetHeight );
+        var diff = document.documentElement.scrollHeight - ( position.top + MENU.offsetHeight );
 
         if ( diff < 0 ) {
             position.top += diff - 1;
