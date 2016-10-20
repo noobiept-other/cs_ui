@@ -27,6 +27,7 @@ Changes were:
 
 ## General ##
 
+- ctrl + c: Open/close the party chat.
 - ctrl + 1: Open home tab.
 - ctrl + 2: Open play tab.
 - ctrl + 3: Open inventory tab.

@@ -1,7 +1,8 @@
 module MainMenu {
 
 
-    var SELECTED: string;   // the tab id ('PlayTab' / 'InventoryTab', etc)
+    type TabId = 'HomeTab' | 'PlayTab' | 'InventoryTab' | 'BlogTab' | 'WatchTab' | 'AwardsTab' | 'OptionsTab';
+    var SELECTED: TabId;
 
 
     export function init() {
@@ -9,11 +10,11 @@ module MainMenu {
         var menu = document.getElementById( 'TopMenu' ) !;
 
         // start with the first tab selected
-        SELECTED = menu.firstElementChild.id + 'Tab';
+        SELECTED = <TabId>( menu.firstElementChild.id + 'Tab' );
         changeTab( SELECTED );
 
         var openTab = function ( this: HTMLElement ) {
-            changeTab( this.id + 'Tab' );
+            changeTab( <TabId>( this.id + 'Tab' ) );
         }
 
         for ( var a = 0; a < menu.children.length; a++ ) {
@@ -26,7 +27,7 @@ module MainMenu {
     }
 
 
-    export function changeTab( tabId: string ) {
+    export function changeTab( tabId: TabId ) {
         if ( SELECTED ) {
             document.getElementById( SELECTED ) !.classList.add( 'hidden' );
         }

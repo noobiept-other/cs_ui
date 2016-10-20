@@ -29,6 +29,7 @@ window.onkeyup = function ( event ) {
     var key = event.keyCode;
     var enter = 13;
     var esc = 27;
+    var c = 67;
     var one = 49;
     var two = 50;
     var three = 51;
@@ -66,6 +67,10 @@ window.onkeyup = function ( event ) {
     else {
         if ( event.ctrlKey ) {
             switch ( key ) {
+                case c:
+                    Party.toggleChat();
+                    break;
+
                 case one:
                     MainMenu.changeTab( 'HomeTab' );
                     break;

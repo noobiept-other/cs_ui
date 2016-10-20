@@ -3,6 +3,8 @@ module Party {
 
     var PARTY: HTMLElement;
     var PARTY_CHAT: HTMLElement;
+    var CHAT_INPUT: HTMLInputElement;
+    var CHAT_OPENED = false;
 
 
     export function init() {
@@ -10,32 +12,20 @@ module Party {
         PARTY_CHAT = document.getElementById( 'PartyChat' ) !;
 
         var chatButton = document.getElementById( 'PartyChatButton' ) !;
-        var chatOpened = false;
-
-        chatButton.onclick = function () {
-            if ( chatOpened ) {
-                closeChat();
-            }
-
-            else {
-                openChat();
-            }
-
-            chatOpened = !chatOpened;
-        };
+        chatButton.onclick = toggleChat;
 
         var kickFromParty = document.getElementById( 'KickFromParty' ) !;
         kickFromParty.onclick = function () {
             removeFriend( ContextMenu.getAssociated() );
         }
 
-        var chatInput = <HTMLInputElement>document.getElementById( 'PartyChatInput' ) !;
-        chatInput.onkeyup = function ( event ) {
+        CHAT_INPUT = <HTMLInputElement>document.getElementById( 'PartyChatInput' ) !;
+        CHAT_INPUT.onkeyup = function ( event ) {
 
             // on 'enter' key press
             if ( event.keyCode === 13 ) {
-                addChatLine( chatInput.value );
-                chatInput.value = '';
+                addChatLine( CHAT_INPUT.value );
+                CHAT_INPUT.value = '';
             }
         };
 
@@ -111,11 +101,25 @@ module Party {
 
     function openChat() {
         PARTY_CHAT.classList.remove( 'hidden' );
+        CHAT_INPUT.focus();
     }
 
 
     function closeChat() {
         PARTY_CHAT.classList.add( 'hidden' );
+    }
+
+
+    export function toggleChat() {
+        if ( CHAT_OPENED ) {
+            closeChat();
+        }
+
+        else {
+            openChat();
+        }
+
+        CHAT_OPENED = !CHAT_OPENED;
     }
 
 
