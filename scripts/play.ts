@@ -1,8 +1,10 @@
 module Play {
 
 
-    var OVERLAY: HTMLElement;
     var PLAYING = false;
+    var ACCEPT_DIALOG_OPENED = false;
+
+    var OVERLAY: HTMLElement;
     var ACCEPT_DIALOG: HTMLElement;
     var MENU_SEARCHING: HTMLElement;
 
@@ -19,6 +21,9 @@ module Play {
         OVERLAY = document.getElementById( 'PlayOverlay' ) !;
         ACCEPT_DIALOG = document.getElementById( 'AcceptDialogOverlay' ) !;
         MENU_SEARCHING = document.getElementById( 'MenuSearching' ) !;
+        MENU_SEARCHING.onclick = function () {
+            MainMenu.changeTab( 'PlayTab' );
+        };
 
         var playButton = document.getElementById( 'PlayButton' ) !;
         playButton.onclick = startSearching;
@@ -26,8 +31,8 @@ module Play {
         var cancel = document.getElementById( 'PlayCancel' ) !;
         cancel.onclick = stopSearching;
 
-        var acceptMatch = document.getElementById( 'AcceptMatch' ) !;
-        acceptMatch.onclick = hideAcceptDialog;
+        var accept = document.getElementById( 'AcceptMatch' ) !;
+        accept.onclick = acceptMatch;
 
         var maps = document.querySelectorAll( '.playList li' );
 
@@ -41,7 +46,11 @@ module Play {
     }
 
 
-    function startSearching() {
+    export function startSearching() {
+        if ( PLAYING ) {
+            return;
+        }
+
         showOverlay();
         showSearchingMenu();
         startTimer();
@@ -51,7 +60,11 @@ module Play {
     }
 
 
-    function stopSearching() {
+    export function stopSearching() {
+        if ( !PLAYING ) {
+            return;
+        }
+
         hideOverlay();
         hideSearchingMenu();
         resetTimer();
@@ -76,13 +89,20 @@ module Play {
     }
 
 
+    export function isAcceptDialogOpened() {
+        return ACCEPT_DIALOG_OPENED;
+    }
+
+
     function showAcceptDialog() {
         ACCEPT_DIALOG.classList.remove( 'hidden' );
+        ACCEPT_DIALOG_OPENED = true;
     }
 
 
     function hideAcceptDialog() {
         ACCEPT_DIALOG.classList.add( 'hidden' );
+        ACCEPT_DIALOG_OPENED = false;
     }
 
 
@@ -140,5 +160,21 @@ module Play {
             window.clearTimeout( MATCH_FOUND_ID );
             MATCH_FOUND_ID = null;
         }
+    }
+
+
+    /**
+     * After a match is found, accept it. Since we're only simulating it, we simply close the dialog.
+     */
+    export function acceptMatch() {
+        hideAcceptDialog();
+    }
+
+
+    /**
+     * After a match is found, refuse to play it. Since we're only simulating it, we simply close the dialog.
+     */
+    export function refuseMatch() {
+        hideAcceptDialog();
     }
 }

@@ -26,7 +26,7 @@ module MainMenu {
     }
 
 
-    function changeTab( tabId: string ) {
+    export function changeTab( tabId: string ) {
         if ( SELECTED ) {
             document.getElementById( SELECTED ) !.classList.add( 'hidden' );
         }
@@ -35,5 +35,10 @@ module MainMenu {
         tab.classList.remove( 'hidden' );
 
         SELECTED = tabId;
+    }
+
+
+    export function currentTab() {
+        return SELECTED;
     }
 }

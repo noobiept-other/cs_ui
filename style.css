@@ -403,3 +403,7 @@ ul {
 #HomeTab figure {
     padding: 20px;
 }
+
+#HomeTab figure:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
