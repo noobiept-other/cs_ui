@@ -125,8 +125,24 @@ ul {
 }
 
 #BottomMenu {
+    justify-content: space-between;
+}
+
+#LeftSide {
     position: relative;
-    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#LeftSide > * {
+    padding: 0 20px;
+    height: 30px;
+}
+
+#MenuSearching {
+    padding: 0 20px;
 }
 
 #TopMenu li {
@@ -135,11 +151,6 @@ ul {
 
 #TopMenu .button:hover {
     background-color: rgb(94, 99, 104);
-}
-
-#BottomMenu > * {
-    padding: 0 20px;
-    height: 30px;
 }
 
 #TopMenu li:not(:last-of-type) {
@@ -241,6 +252,7 @@ ul {
 #PartyChat {
     position: absolute;
     top: -120px;
+    left: 0px;
     padding: 5px;
     color: rgb(184, 185, 186);
     background-color: rgb(40, 50, 60);
@@ -277,6 +289,25 @@ ul {
 
 .playList li {
     display: inline-block;
+    background: linear-gradient(to right, rgb(46, 54, 59), rgb(60, 69, 76));
+    margin: 5px 0;
+}
+
+.playList li:hover {
+    background: linear-gradient(to right, rgb(56, 64, 69), rgb(70, 79, 86));
+}
+
+.playList figure {
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.playList .mapSelected {
+    background: linear-gradient(to right, rgb(66, 92, 125), rgb(50, 68, 92));
+}
+
+.playList .mapSelected:hover {
+    background: linear-gradient(to right, rgb(76, 102, 135), rgb(60, 78, 102));
 }
 
 #PlayTab hr {

@@ -4,6 +4,7 @@ module Play {
     var OVERLAY: HTMLElement;
     var PLAYING = false;
     var ACCEPT_DIALOG: HTMLElement;
+    var MENU_SEARCHING: HTMLElement;
 
     // time has passed during game search
     var TIMER_ID: number | null = null;
@@ -17,6 +18,7 @@ module Play {
 
         OVERLAY = document.getElementById( 'PlayOverlay' ) !;
         ACCEPT_DIALOG = document.getElementById( 'AcceptDialogOverlay' ) !;
+        MENU_SEARCHING = document.getElementById( 'MenuSearching' ) !;
 
         var playButton = document.getElementById( 'PlayButton' ) !;
         playButton.onclick = startSearching;
@@ -26,11 +28,22 @@ module Play {
 
         var acceptMatch = document.getElementById( 'AcceptMatch' ) !;
         acceptMatch.onclick = hideAcceptDialog;
+
+        var maps = document.querySelectorAll( '.playList li' );
+
+        for ( var a = 0; a < maps.length; a++ ) {
+            var map = <HTMLElement>maps[ a ];
+
+            map.onclick = function ( this: HTMLElement ) {
+                this.classList.toggle( 'mapSelected' );
+            }
+        }
     }
 
 
     function startSearching() {
         showOverlay();
+        showSearchingMenu();
         startTimer();
         startMatchFoundTimer();
 
@@ -40,6 +53,7 @@ module Play {
 
     function stopSearching() {
         hideOverlay();
+        hideSearchingMenu();
         resetTimer();
         resetMatchFoundTimer();
 
@@ -69,6 +83,16 @@ module Play {
 
     function hideAcceptDialog() {
         ACCEPT_DIALOG.classList.add( 'hidden' );
+    }
+
+
+    function showSearchingMenu() {
+        MENU_SEARCHING.classList.remove( 'hidden' );
+    }
+
+
+    function hideSearchingMenu() {
+        MENU_SEARCHING.classList.add( 'hidden' );
     }
 
 

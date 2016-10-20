@@ -109,49 +109,49 @@
 				</div>
 				<hr />
 				<ul class="playList">
-					<li>
+					<li class="button mapSelected">
 						<figure class="map">
 							<img src="images/de_dust2.jpg" />
 							<figcaption>Dust II</figcaption>
 						</figure>
 					</li>
-					<li>
+					<li class="button mapSelected">
 						<figure class="map">
 							<img src="images/de_train.jpg" />
 							<figcaption>Train</figcaption>
 						</figure>
 					</li>
-					<li>
+					<li class="button">
 						<figure class="map">
 							<img src="images/de_mirage.jpg" />
 							<figcaption>Mirage</figcaption>
 						</figure>
 					</li>
-					<li>
+					<li class="button mapSelected">
 						<figure class="map">
 							<img src="images/de_nuke.jpg" />
 							<figcaption>Nuke</figcaption>
 						</figure>
 					</li>
-					<li>
+					<li class="button">
 						<figure class="map">
 							<img src="images/de_cbble.jpg" />
 							<figcaption>Cobblestone</figcaption>
 						</figure>
 					</li>
-					<li>
+					<li class="button mapSelected">
 						<figure class="map">
 							<img src="images/de_overpass.jpg" />
 							<figcaption>Overpass</figcaption>
 						</figure>
 					</li>
-					<li>
+					<li class="button">
 						<figure class="map">
 							<img src="images/de_cache.jpg" />
 							<figcaption>Cache</figcaption>
 						</figure>
 					</li>
-					<li>
+					<li class="button">
 						<figure class="map">
 							<img src="images/de_inferno.jpg" />
 							<figcaption>Inferno</figcaption>
@@ -187,16 +187,21 @@
 	</div>
 
 	<div id="BottomMenu">
-		<div id="PartyChatButton" class="button">Party Chat</div>
-		<ul id="Party">
-			<li id="MainPlayer" class="button"><img class="avatar" /> Player Name</li>
-		</ul>
-		<div id="PartyChat" class="hidden">
-			<ul>
-				<li><span class="playerName">Player Name</span>: <span>a message</span></li>
-				<li><span class="playerName">Player Name</span>: <span>other message</span></li>
+		<div id="LeftSide">
+			<div id="PartyChatButton" class="button">Party Chat</div>
+			<ul id="Party">
+				<li id="MainPlayer" class="button"><img class="avatar" /> Player Name</li>
 			</ul>
-			<div><input id="PartyChatInput" type="text" /> <span>mute</span></div>
+			<div id="PartyChat" class="hidden">
+				<ul>
+					<li><span class="playerName">Player Name</span>: <span>a message</span></li>
+					<li><span class="playerName">Player Name</span>: <span>other message</span></li>
+				</ul>
+				<div><input id="PartyChatInput" type="text" /> <span>mute</span></div>
+			</div>
+		</div>
+		<div id="RightSide">
+			<div id="MenuSearching" class="hidden">Searching... <span class="searchTime"></span></div>
 		</div>
 	</div>
 
