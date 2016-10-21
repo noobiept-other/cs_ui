@@ -4,7 +4,7 @@ Some ideas on what the UI could potentially be like. You can [try it out here](h
 
 I have done a rough implementation of the concept as a webpage. I focused more on working on the functional part of the UI, not so much on the looks/style.
 
-Changes were:
+Changes:
 - Be able to move to any part of the UI, even when searching for a game.
 - Have some components always available regardless of where you are in the UI (account name / friend list / party list / party chat).
 - Add some keyboard shortcuts (to show the chat, move between the tabs, etc).
