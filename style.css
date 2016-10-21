@@ -90,7 +90,7 @@ ul {
     padding: 3px 20px;
 }
 
-.innerTab:hover, .tabSelected {
+.innerTab:hover, .innerTabSelected {
     background: linear-gradient(to bottom, rgb(67, 94, 130), rgb(57, 81, 111));
 }
 
@@ -149,7 +149,7 @@ ul {
     padding: 15px 50px;
 }
 
-#TopMenu .button:hover {
+#TopMenu .button:hover, .tabSelected {
     background-color: rgb(94, 99, 104);
 }
 

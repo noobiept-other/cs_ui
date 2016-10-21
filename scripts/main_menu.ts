@@ -1,8 +1,9 @@
 module MainMenu {
 
 
-    type TabId = 'HomeTab' | 'PlayTab' | 'InventoryTab' | 'BlogTab' | 'WatchTab' | 'AwardsTab' | 'OptionsTab';
-    var SELECTED: TabId;
+    type MenuId = 'Home' | 'Play' | 'Inventory' | 'Blog' | 'Watch' | 'Awards' | 'Options';
+    var MENU_SELECTED: HTMLElement;
+    var TAB_SELECTED: HTMLElement;
 
 
     export function init() {
@@ -10,11 +11,10 @@ module MainMenu {
         var menu = document.getElementById( 'TopMenu' ) !;
 
         // start with the first tab selected
-        SELECTED = <TabId>( menu.firstElementChild.id + 'Tab' );
-        changeTab( SELECTED );
+        changeTab( <MenuId>menu.firstElementChild.id );
 
         var openTab = function ( this: HTMLElement ) {
-            changeTab( <TabId>( this.id + 'Tab' ) );
+            changeTab( <MenuId>this.id );
         }
 
         for ( var a = 0; a < menu.children.length; a++ ) {
@@ -27,19 +27,24 @@ module MainMenu {
     }
 
 
-    export function changeTab( tabId: TabId ) {
-        if ( SELECTED ) {
-            document.getElementById( SELECTED ) !.classList.add( 'hidden' );
+    export function changeTab( id: MenuId ) {
+
+        // deselect the previous menu/tab
+        if ( MENU_SELECTED ) {
+
+            TAB_SELECTED.classList.add( 'hidden' );
+            MENU_SELECTED.classList.remove( 'tabSelected' );
         }
 
-        var tab = document.getElementById( tabId ) !;
-        tab.classList.remove( 'hidden' );
+        MENU_SELECTED = document.getElementById( id ) !;
+        TAB_SELECTED = document.getElementById( id + 'Tab' ) !;
 
-        SELECTED = tabId;
+        TAB_SELECTED.classList.remove( 'hidden' );
+        MENU_SELECTED.classList.add( 'tabSelected' );
     }
 
 
-    export function currentTab() {
-        return SELECTED;
+    export function currentMenu() {
+        return MENU_SELECTED.id;
     }
 }

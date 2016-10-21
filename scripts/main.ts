@@ -49,57 +49,63 @@ window.onkeyup = function ( event ) {
                 Play.refuseMatch();
                 break;
         }
+
+        return;
     }
 
-    else if ( MainMenu.currentTab() === 'PlayTab' ) {
-        switch ( key ) {
-            case enter:
-                Play.startSearching();
-                break;
+    if ( MainMenu.currentMenu() === 'Play' ) {
 
-            case esc:
-                Play.stopSearching();
-                break;
+        if ( event.ctrlKey ) {
+            switch ( key ) {
+                case enter:
+                    Play.startSearching();
+                    break;
+            }
+        }
+
+        else {
+            switch ( key ) {
+                case esc:
+                    Play.stopSearching();
+                    break;
+            }
         }
     }
 
     // general shortcuts
-    else {
-        if ( event.ctrlKey ) {
-            switch ( key ) {
-                case c:
-                    Party.toggleChat();
-                    break;
+    if ( event.ctrlKey ) {
+        switch ( key ) {
+            case c:
+                Party.toggleChat();
+                break;
 
-                case one:
-                    MainMenu.changeTab( 'HomeTab' );
-                    break;
+            case one:
+                MainMenu.changeTab( 'Home' );
+                break;
 
-                case two:
-                    MainMenu.changeTab( 'PlayTab' );
-                    break;
+            case two:
+                MainMenu.changeTab( 'Play' );
+                break;
 
-                case three:
-                    MainMenu.changeTab( 'InventoryTab' );
-                    break;
+            case three:
+                MainMenu.changeTab( 'Inventory' );
+                break;
 
-                case four:
-                    MainMenu.changeTab( 'BlogTab' );
-                    break;
+            case four:
+                MainMenu.changeTab( 'Blog' );
+                break;
 
-                case five:
-                    MainMenu.changeTab( 'WatchTab' );
-                    break;
+            case five:
+                MainMenu.changeTab( 'Watch' );
+                break;
 
-                case six:
-                    MainMenu.changeTab( 'AwardsTab' );
-                    break;
+            case six:
+                MainMenu.changeTab( 'Awards' );
+                break;
 
-                case seven:
-                    MainMenu.changeTab( 'OptionsTab' );
-                    break;
-
-            }
+            case seven:
+                MainMenu.changeTab( 'Options' );
+                break;
         }
     }
 };

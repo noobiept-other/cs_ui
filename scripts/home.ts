@@ -8,7 +8,7 @@ module Home {
 
         var latestBlog = document.getElementById( 'LatestBlog' ) !;
         latestBlog.onclick = function () {
-            MainMenu.changeTab( 'BlogTab' );
+            MainMenu.changeTab( 'Blog' );
         }
     }
 }

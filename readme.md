@@ -22,7 +22,7 @@ Changes were:
 
 ## In Play Tab ##
 
-- enter: Start searching for a match.
+- ctrl + enter: Start searching for a match.
 - esc: Cancel search.
 
 ## General ##

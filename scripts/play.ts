@@ -22,7 +22,7 @@ module Play {
         ACCEPT_DIALOG = document.getElementById( 'AcceptDialogOverlay' ) !;
         MENU_SEARCHING = document.getElementById( 'MenuSearching' ) !;
         MENU_SEARCHING.onclick = function () {
-            MainMenu.changeTab( 'PlayTab' );
+            MainMenu.changeTab( 'Play' );
         };
 
         var playButton = document.getElementById( 'PlayButton' ) !;
