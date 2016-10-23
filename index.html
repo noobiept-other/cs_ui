@@ -54,37 +54,56 @@
 		<div id="CurrentTab" class="block">
 			<div id="HomeTab" class="tab hidden">
 				<div class="horizontalList">
-					<figure id="LatestBlog" class="button">
+					<figure id="LatestBlog" class="homeBlock button">
 						<h1>Latest Blog Post</h1>
 						<img src="images/blog_inferno.jpg" alt="Inferno" />
 						<figcaption>Inferno Returns!</figcaption>
 					</figure>
-					<figure>
+					<figure class="homeBlock">
 						<h1>Featured Skin</h1>
-						<img src="images/awp_graphite.png" alt="Awp Graphite" /> <a href="https://steamcommunity.com/market/listings/730/AWP%20%7C%20Graphite%20%28Minimal%20Wear%29">market</a>
+						<img src="images/awp_graphite.png" alt="Awp Graphite" />
+						<div>
+							<a href="#">Inspect</a>
+							<a href="https://steamcommunity.com/market/listings/730/AWP%20%7C%20Graphite%20%28Minimal%20Wear%29" target="_blank">Market</a>
+						</div>
 					</figure>
-					<figure>
+					<figure class="homeBlock">
 						<h1>Featured Case</h1>
 						<img src="images/case.png" alt="Case" />
+						<div>
+							<a href="#">Inspect</a>
+							<a href="http://steamcommunity.com/market/search?q=&appid=730&lock_appid=730&category_730_ItemSet%5B%5D=tag_set_gamma_2"
+								target="_blank">Market</a>
+						</div>
+
 					</figure>
 				</div>
 				<div class="horizontalList">
-					<figure>
+					<figure class="homeBlock">
 						<h1>Overwatch</h1>
-					</figure>
-					<figure>
-						<h1>Game to Watch</h1>
 						<div>
-							<img src="images/global_elite.png" alt="Rank" />
-							<ul>
-								<li>7 - 1</li>
-								<li>Dust II</li>
-								<li>Viewers: 1337</li>
-							</ul>
+							<div id="OverwatchButton" class="button">DOWNLOAD EVIDENCE</div>
+							<div>You have a pending case to review.</div>
 						</div>
+						<div id="OverwatchCaseId"><span>Case ID: 1234</span> <a href="http://blog.counter-strike.net/index.php/overwatch/" target="_blank">F.A.Q.</a></div>
 					</figure>
-					<figure>
+					<figure class="homeBlock">
+						<h1>Game to Watch</h1>
+						<img src="images/global_elite.png" alt="Rank" />
+						<ul>
+							<li>7 - 1</li>
+							<li>Dust II</li>
+						</ul>
+						<div>Viewers: 1337</div>
+					</figure>
+					<figure class="homeBlock">
 						<h1>Previous Game Stats</h1>
+						<ul>
+							<li>16 - 14</li>
+							<li>Inferno</li>
+						</ul>
+						<img src="images/de_inferno.jpg" alt="Inferno" />
+						<div>Yesterday, 10:10</div>
 					</figure>
 				</div>
 			</div>

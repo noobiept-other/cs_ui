@@ -24,6 +24,14 @@ ul {
     margin: 0;
 }
 
+a {
+    color: rgb(180, 180, 180);
+}
+
+a:hover {
+    color: rgb(220, 220, 220);
+}
+
 @font-face {
     font-family: 'iec_symbols_unicoderegular';
     src: url('fonts/Unicode_IEC_symbol.woff');
@@ -104,6 +112,7 @@ ul {
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    height: 50%;
 }
 
 .tab {
@@ -393,17 +402,42 @@ ul {
 }
 
 #HomeTab h1 {
+    font-size: 120%;
     margin: 0;
 }
 
 #HomeTab img {
-    max-width: 150px;
+    width: 70%;
 }
 
-#HomeTab figure {
-    padding: 20px;
+.homeBlock {
+    width: 25%;
+    height: 75%;
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(39, 51, 62, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#HomeTab figure:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+.homeBlock:hover {
+    background-color: rgba(39, 51, 62, 0.8);
+}
+
+#OverwatchButton {
+    background: linear-gradient(to bottom, rgb(73, 103, 145), rgb(53, 76, 107));
+    padding: 10px;
+}
+
+#OverwatchButton:hover {
+    background: linear-gradient(to bottom, rgb(83, 113, 155), rgb(63, 86, 117));
+}
+
+#OverwatchCaseId {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
