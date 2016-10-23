@@ -36,6 +36,7 @@ Changes:
 - ctrl + 6: Open awards tab.
 - ctrl + 7: Open options tab.
 
+`Note`: In the browser implementation use `shift + number` instead, since `ctrl + number` is reserved by the browser (for tab switching).
 
 # Dependencies #
 

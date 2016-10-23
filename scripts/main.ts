@@ -5,6 +5,13 @@ window.onload = function () {
     Home.init();
     Play.init();
     MainMenu.init();
+
+    // load the blog iframe (its done here so it doesn't block the UI loading)
+    var blog = <HTMLIFrameElement>document.querySelector( '#BlogTab' ) !;
+    var iframe = document.createElement( 'iframe' );
+
+    iframe.src = "http://blog.counter-strike.net/";
+    blog.appendChild( iframe );
 };
 
 
@@ -73,7 +80,7 @@ window.onkeyup = function ( event ) {
     }
 
     // general shortcuts
-    if ( event.ctrlKey ) {
+    if ( event.ctrlKey || event.shiftKey ) {
         switch ( key ) {
             case c:
                 Party.toggleChat();
