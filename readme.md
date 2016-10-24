@@ -7,6 +7,7 @@ I have done a rough implementation of the concept as a webpage. I focused more o
 ## [Try it out here!](http://nbpt.eu/app/cs_ui/) ##
 
 Changes:
+
 - Be able to move to any part of the UI, even when searching for a game.
 - Have some components always available regardless of where you are in the UI (account name / friend list / party list / party chat).
 - Add some keyboard shortcuts (to show the chat, move between the tabs, etc).
