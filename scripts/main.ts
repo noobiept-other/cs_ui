@@ -19,12 +19,6 @@ window.onload = function () {
  * Hide the friend's context menu when clicked outside off it.
  */
 window.onclick = function ( event ) {
-    var element = event.srcElement;
-
-    if ( !element ) {
-        return;
-    }
-
     ContextMenu.hide();
 };
 
