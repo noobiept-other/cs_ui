@@ -4,7 +4,7 @@ Some ideas on what the UI could potentially be like.
 
 I have done a rough implementation of the concept as a webpage. I focused more on working on the functional part of the UI, not so much on the looks/style.
 
-## [Try it out here!](http://nbpt.eu/games/cs_ui/) ##
+## [Try it out here!](http://nbpt.eu/app/cs_ui/) ##
 
 Changes:
 - Be able to move to any part of the UI, even when searching for a game.
